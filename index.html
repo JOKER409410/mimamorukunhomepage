@@ -8,7 +8,14 @@
       name="description"
       content="みまもるくんのデスクトップアプリをダウンロードできるホームページです。"
     />
- <link rel="stylesheet" href="./css/index.css">
+    <!--
+      このファイルはサイトのトップページです。
+      - CSS は `css/index.css` に分離しています。
+      - ダウンロードリンクはローカルの `downloads/mimamorukun-win.zip` を指しています。
+        実運用では GitHub Releases や外部ストレージに本体を置くことを推奨します。
+      - `downloads/` フォルダは `.gitignore` に入れているためリポジトリには含めません。
+    -->
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
     <header class="hero">
@@ -19,11 +26,19 @@
           GitHubのリポジトリを選んで、コミットやブランチ情報をまとめて取得できる
           デスクトップアプリです。
         </p>
+        <!-- 操作ボタン -->
         <div class="actions">
-          <a class="button primary" href="./files/sample.zip" download>
+          <!--
+            ローカルのサンプルZIPを指すダウンロードボタン。
+            実際の配布物は GitHub Releases 等に置いてください。
+          -->
+          <a class="button primary" href="downloads/mimamorukun-win.zip" download>
             Windows版をダウンロード
           </a>
+          <!-- 機能セクションへスクロール -->
           <a class="button secondary" href="#features">機能を見る</a>
+          <!-- 新しい説明ページへのリンク -->
+          <a class="button secondary" href="app.html">アプリの説明</a>
         </div>
       </div>
     </header>
